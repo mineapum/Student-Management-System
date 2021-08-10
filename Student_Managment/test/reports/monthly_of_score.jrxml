@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="567" leftMargin="14" rightMargin="14" topMargin="14" bottomMargin="14" uuid="0577e76c-9b98-4fbf-9ad3-ad69afb67897">
+	<property name="ireport.zoom" value="2.47933884297521"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="33"/>
+	<parameter name="pre_by" class="java.lang.String"/>
+	<parameter name="subjectname" class="java.lang.String"/>
+	<field name="scoreid" class="java.lang.String"/>
+	<field name="studentid" class="java.lang.String"/>
+	<field name="subjectid" class="java.lang.String"/>
+	<field name="quiz" class="java.lang.String"/>
+	<field name="attenden" class="java.lang.String"/>
+	<field name="midterm" class="java.lang.String"/>
+	<field name="assigment" class="java.lang.String"/>
+	<field name="finals" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<field name="formonth" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="1" y="0" width="74" height="79" uuid="b4b29b41-0aed-43fb-b955-81e0005a28cc"/>
+				<imageExpression><![CDATA["test/reports/rpt_logos.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="76" y="0" width="429" height="46" uuid="bbb8f641-268e-4c57-b963-b38260177e75"/>
+				<textElement textAlignment="Center">
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[WESTERN UNIVERSITY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="149" y="46" width="298" height="18" forecolor="#006666" uuid="851305ea-a0b5-47c2-9a7e-527ba4a01896"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[#171-173, Phreah Ang Eng Street, Kampong Cham Province]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="235" y="0" width="113" height="20" uuid="5de8202a-ce7f-4cea-98df-18968c860618"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Result of Score]]></text>
+			</staticText>
+			<line>
+				<reportElement x="237" y="20" width="111" height="1" uuid="261f4117-5655-47ca-a2e4-ab68835e9dc9"/>
+			</line>
+			<textField>
+				<reportElement x="267" y="20" width="100" height="20" uuid="5bbcf857-cf0e-4bcb-90c7-76e1301bae9c"/>
+				<box topPadding="2" leftPadding="2"/>
+				<textFieldExpression><![CDATA[$P{subjectname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="224" y="20" width="43" height="20" uuid="de136333-bd85-4016-b3cb-0416878db415"/>
+				<box topPadding="2" leftPadding="2"/>
+				<text><![CDATA[Subject :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="1" y="0" width="55" height="15" forecolor="#FFFFFF" backcolor="#00CC99" uuid="ba8ea9db-e9c0-4a87-9022-80c28f429fd8"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Score ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="56" y="0" width="56" height="15" forecolor="#FFFFFF" backcolor="#00CC99" uuid="158faf9b-4262-4252-8fad-57c81561031d"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="112" y="0" width="56" height="15" forecolor="#FFFFFF" backcolor="#00CC99" uuid="c3da1556-6132-4ce0-9366-e47f5fcf26a2"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Subject ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="168" y="0" width="56" height="15" forecolor="#FFFFFF" backcolor="#00CC99" uuid="d9e516b5-b2d2-4b01-bc2e-00fdf547afac"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Quiz]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="224" y="0" width="56" height="15" forecolor="#FFFFFF" backcolor="#00CC99" uuid="ae9f35df-75ae-41b0-a37c-cd0650ced4ce"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Attendance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="0" width="56" height="15" forecolor="#FFFFFF" backcolor="#00CC99" uuid="34a55b5d-3b29-45fb-97ce-ccc5f47a020e"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Midterm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="336" y="0" width="56" height="15" forecolor="#FFFFFF" backcolor="#00CC99" uuid="dd1fb415-5e30-49c6-a68c-3c29ff7dce6a"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Asssignment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="392" y="0" width="56" height="15" forecolor="#FFFFFF" backcolor="#00CC99" uuid="2815d6c4-2447-4972-b4ad-56eaabcb2f1f"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="448" y="0" width="56" height="15" forecolor="#FFFFFF" backcolor="#00CC99" uuid="e8c538e9-82f0-48ac-8e0a-44de9d22bd65"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="504" y="0" width="56" height="15" forecolor="#FFFFFF" backcolor="#00CC99" uuid="c4b5bc35-7de1-4066-a562-603cd5e5d443"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ForMonth]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="560" height="1" uuid="8658b438-6983-481b-8aac-565f016fe28f"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="1" height="14" uuid="4d749d2f-995c-49cd-95bb-bb3951a4225e"/>
+			</line>
+			<line>
+				<reportElement x="56" y="1" width="1" height="14" uuid="03a25ad6-b4a1-461f-9eda-083a93797357"/>
+			</line>
+			<line>
+				<reportElement x="111" y="1" width="1" height="14" uuid="aac9e759-b075-4721-af8a-15624fe2572f"/>
+			</line>
+			<line>
+				<reportElement x="168" y="1" width="1" height="14" uuid="7c07dba6-5f0d-4df9-8334-08d682268245"/>
+			</line>
+			<line>
+				<reportElement x="223" y="1" width="1" height="14" uuid="d41efd8c-9a75-4df3-ba7a-2e5f0140d57d"/>
+			</line>
+			<line>
+				<reportElement x="279" y="1" width="1" height="14" uuid="ec9cd655-3385-436c-be50-b5b8ac7d0eb2"/>
+			</line>
+			<line>
+				<reportElement x="335" y="1" width="1" height="14" uuid="0b5fa67b-235f-452b-988f-8efc575a9469"/>
+			</line>
+			<line>
+				<reportElement x="392" y="1" width="1" height="14" uuid="d250508d-a3fc-4570-ad54-c2d8499f72fb"/>
+			</line>
+			<line>
+				<reportElement x="447" y="1" width="1" height="14" uuid="3ac29733-0e9c-4ec9-a533-3a82fd235265"/>
+			</line>
+			<line>
+				<reportElement x="504" y="1" width="1" height="14" uuid="a539e620-4f91-460c-8259-0fd6c1250566"/>
+			</line>
+			<line>
+				<reportElement x="560" y="0" width="1" height="15" uuid="f88c776b-288e-454b-ab8d-5f118f730f1e"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="55" height="15" uuid="9c58d486-ed37-4c12-b580-e03fa2f08020"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{scoreid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="0" width="56" height="15" uuid="c01ed849-3207-4e22-8c7a-74079e2bab30"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{studentid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="0" width="56" height="15" uuid="aa20e61e-9886-4724-8391-0de447fe964e"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subjectid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="0" width="56" height="15" uuid="9a12794e-5451-4d43-954e-391e495d8e74"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quiz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="0" width="56" height="15" uuid="ab24487a-5601-40dc-bd93-316595e86383"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{attenden}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="56" height="15" uuid="9e8e15d0-e624-4c58-9aa8-215c25b0af98"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{midterm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="0" width="56" height="15" uuid="624c17e0-c008-4fb1-b66e-704a65fdb7c2"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{assigment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="0" width="56" height="15" uuid="18f5e152-b683-4815-9c10-fd1b1c7d9c66"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{finals}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="448" y="0" width="56" height="15" uuid="c4b9576f-8cf7-40c4-b29e-df233420390b"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="504" y="0" width="56" height="15" uuid="e6b45ba9-b5fc-45fc-845d-b9171aa899bf"/>
+				<box topPadding="1" leftPadding="2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{formonth}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="14" width="560" height="1" uuid="223c8843-eef9-439b-99e6-83edb0065c8f"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="560" height="1" uuid="79badef6-eb6e-4292-a14a-26e2f4aa221a"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="14" uuid="b2ede424-dd55-4174-bd7e-4c4fe793322d"/>
+			</line>
+			<line>
+				<reportElement x="56" y="0" width="1" height="14" uuid="00992fce-8b2d-422d-be22-c2f29a09de7b"/>
+			</line>
+			<line>
+				<reportElement x="111" y="0" width="1" height="14" uuid="6bfd44e4-2636-41ea-9469-af19418f1bc2"/>
+			</line>
+			<line>
+				<reportElement x="168" y="1" width="1" height="14" uuid="ae865bf3-6817-4763-bca3-aabafdaaff26"/>
+			</line>
+			<line>
+				<reportElement x="223" y="0" width="1" height="14" uuid="93aaf3d3-6c13-49ac-baf8-64b763d36d48"/>
+			</line>
+			<line>
+				<reportElement x="279" y="0" width="1" height="14" uuid="d08189fa-7da0-4b09-8393-b888757ffb56"/>
+			</line>
+			<line>
+				<reportElement x="335" y="0" width="1" height="14" uuid="7a57d502-c8eb-413c-88af-34c03ec3cd2b"/>
+			</line>
+			<line>
+				<reportElement x="392" y="0" width="1" height="14" uuid="aad976b8-0782-4aef-80c6-f123ecbb98ee"/>
+			</line>
+			<line>
+				<reportElement x="447" y="0" width="1" height="14" uuid="b7db4462-a3ce-40b9-b1bb-cef70dd04d27"/>
+			</line>
+			<line>
+				<reportElement x="504" y="0" width="1" height="14" uuid="c896a6ac-7ea9-458f-961f-7a22db0a52d1"/>
+			</line>
+			<line>
+				<reportElement x="560" y="0" width="1" height="15" uuid="d74c5fdf-c162-491b-ae3d-2ec6626bd026"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="10" y="30" width="235" height="15" forecolor="#333333" uuid="055db65b-3665-46ed-8d2c-2b1b95312227"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[#171-173, Phreah Ang Eng Street, Kampong Cham Province]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="10" y="20" width="235" height="15" forecolor="#333333" uuid="2c6ecfc6-1dc5-415e-8553-a66ae050c3d3"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[#47, St, 173, Toul Svay Prey, ChamKarmorn, Phnom Penh.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="10" y="10" width="235" height="15" forecolor="#333333" uuid="e12a52bc-5bf7-4d27-af43-75b3d6a7e6b9"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[#15, St.528, Boeung Kok, ToulKok, Phnom Penh.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="268" y="10" width="94" height="15" forecolor="#333333" uuid="bcb8f4e9-68f4-45d9-a9cf-0925f8d1a889"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Phone: (855) 23 998 233]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="268" y="20" width="94" height="15" forecolor="#333333" uuid="bed6f89a-c70a-4e2a-868b-dec644032002"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Phone: (855) 23 220 093]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="268" y="30" width="94" height="15" forecolor="#333333" uuid="b9799140-f3f9-4eba-ac54-e0bc7030930d"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Phone: (855) 42 942 024]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="396" y="10" width="168" height="15" forecolor="#333333" uuid="2918ff22-5bb0-4f30-a123-dbcb0c39aca8"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Fax : (855) 23 990 699]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="396" y="20" width="168" height="15" forecolor="#333333" uuid="4466fc11-3bd3-409b-b700-16197c66b656"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[E-mail: info_wu@western.edu.com.kh]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="396" y="30" width="168" height="14" forecolor="#333333" uuid="485d31ae-9bd3-48e7-9867-621f3d8ed6cb"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Website: www.western.edu.kh]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="561" height="1" uuid="8e0134e6-8c2e-46b8-a638-32b8555ff7a4"/>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="46" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="561" height="1" uuid="135e3668-6b8b-430c-b0ac-4b1db74179c7"/>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="394" y="6" width="167" height="16" uuid="304d3b20-f7f5-47b6-aea1-2c4d8378ad99"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="394" y="22" width="54" height="15" uuid="a2c309f0-b387-477d-8a4e-47586c2156a4"/>
+				<text><![CDATA[Prepare by:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="448" y="22" width="112" height="15" uuid="add4c990-05c6-417a-8304-a6ecc96c2922"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pre_by}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

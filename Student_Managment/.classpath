@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="dist/lib/AbsoluteLayout.jar"/>
+	<classpathentry kind="lib" path="dist/lib/beansbinding-1.2.1.jar"/>
+	<classpathentry kind="lib" path="dist/lib/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="dist/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="dist/lib/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="dist/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="dist/lib/groovy-all-2.0.1.jar"/>
+	<classpathentry kind="lib" path="dist/lib/jasperreports-5.6.0.jar"/>
+	<classpathentry kind="lib" path="dist/lib/javax.mail.jar"/>
+	<classpathentry kind="lib" path="dist/lib/jcalendar-1.4.jar"/>
+	<classpathentry kind="lib" path="dist/lib/mysql-connector-java-8.0.24.jar"/>
+	<classpathentry kind="lib" path="dist/lib/rs2xml.jar"/>
+	<classpathentry kind="lib" path="dist/Student_Managment.jar"/>
+	<classpathentry kind="lib" path="test/lib/commons-beanutils-1.8.3.jar"/>
+	<classpathentry kind="lib" path="test/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="test/lib/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="test/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="test/lib/groovy-all-2.0.1.jar"/>
+	<classpathentry kind="lib" path="test/lib/jasperreports-5.6.0.jar"/>
+	<classpathentry kind="lib" path="test/lib/javax.mail.jar"/>
+	<classpathentry kind="lib" path="test/lib/jcalendar-1.4.jar"/>
+	<classpathentry kind="lib" path="test/lib/mysql-connector-java-8.0.24.jar"/>
+	<classpathentry kind="lib" path="test/lib/rs2xml.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

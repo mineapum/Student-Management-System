@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="226" pageHeight="283" columnWidth="224" leftMargin="1" rightMargin="1" topMargin="1" bottomMargin="1" uuid="dd8ed0c7-15c4-4a55-83e2-a58db49cf856">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="payment_no" class="java.lang.String"/>
+	<parameter name="payment_date" class="java.lang.String"/>
+	<parameter name="fname" class="java.lang.String"/>
+	<parameter name="lname" class="java.lang.String"/>
+	<parameter name="years" class="java.lang.String"/>
+	<parameter name="payment_for" class="java.lang.String"/>
+	<parameter name="discount" class="java.lang.String"/>
+	<parameter name="amount" class="java.lang.String"/>
+	<parameter name="tax" class="java.lang.String"/>
+	<parameter name="total_usd" class="java.lang.String"/>
+	<parameter name="total_khr" class="java.lang.String"/>
+	<parameter name="cashier" class="java.lang.String"/>
+	<field name="fname" class="java.lang.String"/>
+	<field name="lname" class="java.lang.String"/>
+	<field name="years" class="java.lang.String"/>
+	<field name="payment_for" class="java.lang.String"/>
+	<field name="discount" class="java.lang.String"/>
+	<field name="amount" class="java.lang.String"/>
+	<field name="tax" class="java.lang.String"/>
+	<field name="total_usd" class="java.lang.String"/>
+	<field name="total_khr" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement x="38" y="0" width="186" height="20" forecolor="#666666" uuid="4e2a6e23-6eee-4b1e-89f6-81664d1474fc"/>
+				<textElement>
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[WESTERN UNIVERSITY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="69" y="56" width="86" height="17" forecolor="#999999" uuid="a4d3bb75-cfa8-4f6c-9980-855316c75032"/>
+				<textElement>
+					<font fontName="Impact" size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[OFFICIAL RECEIPT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="43" width="17" height="11" uuid="16b84470-4b00-49ef-b8ac-176d7f207a07"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[No:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="43" width="18" height="11" uuid="4dc86267-a679-4794-b23a-0653996e8e76"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="66" y="43" width="40" height="11" forecolor="#FF0000" uuid="719d07c3-e2ea-46bc-86f6-1c509bc460d3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{payment_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="124" y="43" width="100" height="11" forecolor="#0000CC" uuid="b5d5c5b0-ba22-4698-a22c-6e19fb3db7d8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{payment_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="38" y="20" width="186" height="11" forecolor="#006666" uuid="40b8f206-b28d-4dee-b8d1-0f761656e821"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[#171-173, Phreah Ang Eng Street, Kampong Cham Province]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="55" width="224" height="1" uuid="c9bc9a2b-c781-487d-98c8-9fdfe778a1a0"/>
+			</line>
+			<line>
+				<reportElement x="0" y="73" width="224" height="1" uuid="31c8a36e-2901-4848-b783-1e06dac98dc4"/>
+			</line>
+			<staticText>
+				<reportElement x="49" y="31" width="28" height="12" uuid="8f5424a5-ef79-409a-a3d0-2b1ca483170c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Cashier:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="77" y="31" width="147" height="12" uuid="151552e6-d39e-4fa4-ac56-e51f3072c6e7"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cashier}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="38" height="54" uuid="c46d0bf1-0da6-42d0-a979-9647f94f36c5"/>
+				<imageExpression><![CDATA["test/reports/rpt_logos.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="69" height="12" uuid="ff318bc0-f27f-4a23-a564-368cdf08b07d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[First Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="11" width="69" height="12" uuid="f4fa642e-f114-4474-b7ed-cb362debccde"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Last Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="29" height="11" uuid="b89349bd-4db7-4ffe-bd0f-2bc92bac70b5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Year:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="22" width="28" height="11" uuid="99a37c85-0b09-47a4-89c7-8557b1b41c87"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Pay for:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="32" width="38" height="11" uuid="c5a68250-dcff-4668-9707-f0acaf7fa477"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Discount:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="87" y="32" width="32" height="11" uuid="340957e3-084b-453c-a432-1876ea015690"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Amount:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="173" y="32" width="15" height="11" uuid="596630db-ddf3-4e13-af82-7866a285eb43"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Tax:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="119" y="43" width="36" height="22" forecolor="#FFFFFF" backcolor="#999999" uuid="df188681-3633-4100-848c-439ad621b3e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="38" y="32" width="49" height="11" uuid="78b1cc47-b341-43c9-a8c4-90321e4ffb58"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="32" width="36" height="11" uuid="5180d559-562a-4c3d-9f14-a6d467951331"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="173" y="54" width="51" height="11" forecolor="#FFFFFF" backcolor="#999999" uuid="8d844766-1539-4022-b3f3-faf8c78e8e69"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_khr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="69" y="11" width="155" height="12" uuid="8867b4c2-7993-4393-926e-19d2917e4cf2"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="29" y="22" width="79" height="11" uuid="ee5df8ef-bb30-44e0-bf22-61aa2b4576ac"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{years}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="22" width="90" height="11" uuid="fe67f053-8737-416e-bd4d-7ed2cbfab849"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{payment_for}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="155" y="43" width="18" height="11" forecolor="#FFFFFF" backcolor="#999999" uuid="4086da6c-1058-4f3b-aaa3-024b920e8e5f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[USD]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="119" y="32" width="54" height="11" uuid="a33ad8f1-969c-43d5-b0da-471538fb388e"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="155" y="54" width="18" height="11" forecolor="#FFFFFF" backcolor="#999999" uuid="726d8dd2-2de4-4742-94f0-511710e881b5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[KHR]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="173" y="43" width="51" height="11" forecolor="#FFFFFF" backcolor="#999999" uuid="6e4be2ba-0bc2-4e1a-a574-43a10f32aa75"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_usd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="69" y="0" width="155" height="12" uuid="0cd6fabe-03e6-4bf1-adcf-d51f11df2f41"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="29" y="21" width="159" height="10" forecolor="#006666" uuid="ceb13122-76c9-41df-86d6-f670fb30d82b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<text><![CDATA[#171-173, Phreah Ang Eng Street, Kampong Cham Province]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="11" width="159" height="10" forecolor="#006666" uuid="db0878c0-f7f5-4a09-a336-0951b243c18c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<text><![CDATA[#47, St, 173, Toul Svay Prey, ChamKarmorn, Phnom Penh.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="1" width="159" height="10" forecolor="#006666" uuid="9b3f63d7-3ebd-4782-87b3-1cb287e4ddc9"/>
+				<box topPadding="0" bottomPadding="2"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<text><![CDATA[#15, St.528, Boeung Kok, ToulKok, Phnom Penh.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="35" width="94" height="10" forecolor="#006666" uuid="63da571d-0dd3-44d5-9c7b-ea77e0ff33cc"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<text><![CDATA[Phone: (855) 23 998 233]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="45" width="94" height="10" forecolor="#006666" uuid="67265066-5c66-431f-8552-287128036081"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<text><![CDATA[Phone: (855) 23 220 093]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="55" width="94" height="9" forecolor="#006666" uuid="1a607a1b-f6c6-42d5-9814-5318bdc5b688"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<text><![CDATA[Phone: (855) 42 942 024]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="35" width="100" height="10" forecolor="#006666" uuid="f43090b4-2c5e-40a9-adee-1e8864cd2766"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<text><![CDATA[Fax : (855) 23 990 699]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="45" width="100" height="8" forecolor="#006666" uuid="dcb9b7e7-fc0a-45f9-b42d-25017155fb3e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<text><![CDATA[E-mail: info_wu@western.edu.com.kh]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="54" width="100" height="9" forecolor="#006666" uuid="80b3cbe4-80dd-4418-a7f3-5389a51da880"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6"/>
+				</textElement>
+				<text><![CDATA[Website: www.western.edu.kh]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="224" height="1" uuid="a2e28f8b-a91a-4e3b-b1f3-6d17f174d72f"/>
+			</line>
+			<line>
+				<reportElement x="0" y="34" width="224" height="1" uuid="f596aa74-cd9c-4cdc-a987-308f2feed964"/>
+			</line>
+			<line>
+				<reportElement x="0" y="64" width="224" height="1" uuid="ec1c67cd-08e0-4528-901d-616bab29fb2c"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
