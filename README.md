@@ -5,7 +5,7 @@ How to install this Project?
 First 
 import our database into your database 
 Second
-install xampp this link for download xampp https://www.apachefriends.org/index.html
+install xampp this link for download xampp and Run it https://www.apachefriends.org/index.html
 Third 
 Install our Project exe files but i reconnend you install into D:
 
